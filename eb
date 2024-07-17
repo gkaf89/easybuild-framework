@@ -58,8 +58,8 @@ PYTHON=
 # When selecting the PYTHON command to use, we need to first take environment variable settings into account
 # - EB_PYTHON is a variable set by the user that takes precedence over everything else
 # - EB_INSTALLPYTHON is set when EasyBuild is installed as a module (by EasyBuild). It is set to the PYTHON
-#   used during that installation (for example, you could override PYTHON using EB_PYTHON at installation
-#   time, this variable preserves that choice).
+#   used during that installation (for example, if you override PYTHON using EB_PYTHON during installation,
+#   then the EB_INSTALLPYTHON variable preserves your choice of PYTHON).
 for python_cmd in "${EB_PYTHON}" "${EB_INSTALLPYTHON}" 'python' 'python3' 'python2'; do
 
     # Only consider non-empty values, i.e. continue if e.g. $EB_PYTHON is not set
